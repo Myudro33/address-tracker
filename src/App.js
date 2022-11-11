@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import Background from "./components/Background";
+import Info from "./components/Info";
+import Input from "./components/Input";
 
-function App() {
+const App = () => {
+  const [lat, setlat] = useState(41.7151);
+  const [lon, setlon] = useState(44.8271);
+  const [data, setdata] = useState({
+    ip: "80.92.177.40",
+    isp: "Railway Telecom, Ltd",
+    lat: 41.71667,
+    lon: 44.75,
+    region: "K'alak'i T'bilisi",
+    city:'Saburtalo',
+    timeZone: "+04:00",
+  });
+  useEffect(() => {
+    setlat(data.lat)
+    setlon(data.lon)
+  }, [data])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{display:'flex',justifyContent:'center'}} >
+      <Input setdata={setdata} />
+      <Info data={data} />
+      <Background lat={lat} lon={lon} />
     </div>
   );
-}
+};
 
 export default App;
