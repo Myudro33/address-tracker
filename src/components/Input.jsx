@@ -19,6 +19,7 @@ const Input = ({ setdata }) => {
       timeZone:response.data.location.timezone,
       ip:response.data.ip
     });
+    setvalue('')
   };
   return (
     <div className="input-div">
