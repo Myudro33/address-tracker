@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/address-tracker/static/css/main.05916f23.css",
+    "main.js": "/address-tracker/static/js/main.44c259ce.js",
+    "static/media/pattern-bg.png": "/address-tracker/static/media/pattern-bg.a60a3c85aa8b88aac4b7.png",
+    "index.html": "/address-tracker/index.html",
+    "main.05916f23.css.map": "/address-tracker/static/css/main.05916f23.css.map",
+    "main.44c259ce.js.map": "/address-tracker/static/js/main.44c259ce.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05916f23.css",
+    "static/js/main.44c259ce.js"
+  ]
+}
